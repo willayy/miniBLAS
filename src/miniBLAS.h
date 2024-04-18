@@ -1,6 +1,10 @@
 #ifndef miniBLAS_h
     #define miniBLAS_h
 
+    #if defined(__x86_64__) || defined(__amd64__) || defined(_M_X64)
+        #define ARCH "x86_64"
+    #endif
+
     typedef double * dbl_vector;
 
     int testret2asm();
